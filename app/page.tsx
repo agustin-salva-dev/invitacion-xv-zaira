@@ -75,7 +75,10 @@ export default function InvitationPage() {
           <FloatingMusicPlayer musicPlayer={musicPlayer} />
 
           {/* Portada estilo Fairytale (Árbol, farol, mascotas en el río, corona) */}
-          <CoverHero honoree={invitationData.honoree} />
+          <CoverHero
+            honoree={invitationData.honoree}
+            displayDate={invitationData.displayDate}
+          />
 
           {/* Cuenta regresiva */}
           <CountdownSection eventDate={invitationData.eventDate} />
