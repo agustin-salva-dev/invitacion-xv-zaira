@@ -30,7 +30,7 @@ export function TipsModal({ isOpen, onClose }: TipsModalProps) {
           </li>
           <li>
             📅 Se solicita confirmar asistencia antes del{" "}
-            <strong>1 de Junio</strong>
+            <strong>5 de Noviembre</strong>
           </li>
         </ul>
       </div>
