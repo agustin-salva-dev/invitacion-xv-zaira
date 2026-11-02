@@ -56,31 +56,6 @@ export function GiftsModal({ isOpen, onClose }: GiftsModalProps) {
           podés hacerlo a través de:
         </p>
 
-        {/* Subsección 1: Sobre en el evento */}
-        <div className="modal-gift-section">
-          <h6>Sobre en el evento</h6>
-
-          <div className="bank-cards-container">
-            <div className="bank-item-card">
-              <div className="bank-item-left">
-                <div className="bank-icon-circle" aria-hidden="true">
-                  <Mail size={18} className="bank-icon" />
-                </div>
-                <div className="bank-item-info">
-                  <span className="bank-item-title">Buzón de sobres</span>
-                  <span className="bank-item-value">
-                    Habrá un buzón en el salón durante la fiesta para dejar tu presente.
-                  </span>
-                </div>
-              </div>
-              <span className="gift-event-badge" aria-label="Modalidad presencial">
-                <MapPin size={13} className="gift-badge-icon" />
-                <span>En el salón</span>
-              </span>
-            </div>
-          </div>
-        </div>
-
         {/* Subsección 2: Transferencia */}
         <div className="modal-gift-section">
           <h6>Transferencia</h6>
