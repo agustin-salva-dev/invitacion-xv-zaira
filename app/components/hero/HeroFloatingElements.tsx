@@ -27,7 +27,7 @@ export function HeroFloatingElements(_props: HeroFloatingElementsProps) {
             src="/assets/images/decorations/mariposa-top.png"
             alt=""
             width={72}
-            height={72}
+            height={64}
             style={{ width: "auto", height: "auto" }}
             onError={() => setButterflyTopError(true)}
           />
@@ -41,7 +41,7 @@ export function HeroFloatingElements(_props: HeroFloatingElementsProps) {
             src="/assets/images/decorations/mariposa-bottom.png"
             alt=""
             width={56}
-            height={56}
+            height={60}
             style={{ width: "auto", height: "auto" }}
             onError={() => setButterflyBottomError(true)}
           />
