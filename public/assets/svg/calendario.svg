@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 120 120" style="enable-background:new 0 0 120 120;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#AF8566;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g>
+	<!-- Marco del calendario -->
+	<rect class="st0" x="20" y="26" width="80" height="76" rx="12" />
+	<!-- Barra superior separadora -->
+	<line class="st0" x1="20" y1="48" x2="100" y2="48" />
+	<!-- Ganchos / anillas superiores -->
+	<line class="st0" x1="38" y1="16" x2="38" y2="34" />
+	<line class="st0" x1="82" y1="16" x2="82" y2="34" />
+	<!-- Checkmark de confirmación -->
+	<polyline class="st0" points="44,73 55,84 78,61" />
+</g>
+</svg>
+

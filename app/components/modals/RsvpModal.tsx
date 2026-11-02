@@ -89,9 +89,8 @@ export function RsvpModal({ isOpen, honoree, onClose }: RsvpModalProps) {
               src="/assets/svg/calendario.svg"
               alt=""
               aria-hidden="true"
-              onError={(e) => {
-                (e.currentTarget as HTMLImageElement).style.display = "none";
-              }}
+              width={50}
+              height={50}
             />
           </div>
 
