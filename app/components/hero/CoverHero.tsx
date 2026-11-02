@@ -1,29 +1,34 @@
 "use client";
 
-interface CoverHeroProps {
-  readonly honoree: string;
-}
+import type { CoverHeroProps } from "@/app/components/hero/hero.types";
+import { HeroBackground } from "@/app/components/hero/HeroBackground";
+import { HeroLandscape } from "@/app/components/hero/HeroLandscape";
+import { HeroFloatingElements } from "@/app/components/hero/HeroFloatingElements";
+import { HeroTypography } from "@/app/components/hero/HeroTypography";
 
-export function CoverHero({ honoree }: CoverHeroProps) {
+export function CoverHero({ honoree, displayDate }: CoverHeroProps) {
   return (
-    <section className="fairytale-hero-section" aria-label={`Invitación de 15 años de ${honoree}`}>
-      {/* Título semántico accesible para SEO y lectores de pantalla */}
+    <section
+      className="hero-section"
+      aria-label={`Invitación de 15 años de ${honoree}`}
+    >
+      {/* Título accesible para SEO y lectores de pantalla */}
       <h1 className="sr-only">
-        Invitación de 15 años de {honoree} - Mis Quince Años
+        Invitación de 15 años de {honoree} – Mis Quince Años
       </h1>
 
-      <div className="fairytale-poster-wrapper">
-        {/* Póster íntegro en alta definición sin cortes ni fragmentos */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/assets/images/portada-zaira-fairytale.jpg"
-          alt={`Invitación de 15 años de ${honoree}`}
-          className="fairytale-poster-img"
-          priority-component="true"
-        />
+      <div className="hero-inner">
+        {/* Capa 1: Fondo limpio neutro */}
+        <HeroBackground />
 
-        {/* Efecto interactivo vivo: luz cálida titilante en el farol */}
-        <div className="lantern-candle-glow" aria-hidden="true" />
+        {/* Capa 2: Paisaje decorativo (árbol + animales/río) */}
+        <HeroLandscape />
+
+        {/* Capa 3: Elementos flotantes (mariposas, farol, destellos) */}
+        <HeroFloatingElements />
+
+        {/* Capa 4: Tipografía y contenido semántico */}
+        <HeroTypography honoree={honoree} displayDate={displayDate} />
       </div>
     </section>
   );

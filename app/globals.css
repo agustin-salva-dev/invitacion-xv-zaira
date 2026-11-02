@@ -5,25 +5,25 @@
    ======================================================== */
 :root {
   /* Paleta Base Navy - Máxima jerarquía y elegancia */
-  --color-primary: #04294A;          /* Navy profundo: títulos principales y botones CTA */
-  --color-secondary: #1E3F5B;        /* Azul pizarra oscuro: textos de cuerpo y subtítulos (ALTO CONTRASTE) */
-  --color-accent: #7E9FB0;           /* Azul grisáceo: bordes decorativos y divisores sutiles */
-  --color-surface-subtle: #DAE8F1;   /* Celeste gélido: fondos de cards alternas y footer */
-  --color-surface-subtle-darker: #C3D9E9; /* Celeste más oscuro: franja inferior con la firma */
-  --color-surface-clean: #FFFFFF;    /* Blanco puro: interiores de tarjetas */
-  --color-bg-body: #EEF8FF;          /* Fondo general del body */
+  --color-primary: #04294a; /* Navy profundo: títulos principales y botones CTA */
+  --color-secondary: #1e3f5b; /* Azul pizarra oscuro: textos de cuerpo y subtítulos (ALTO CONTRASTE) */
+  --color-accent: #7e9fb0; /* Azul grisáceo: bordes decorativos y divisores sutiles */
+  --color-surface-subtle: #dae8f1; /* Celeste gélido: fondos de cards alternas y footer */
+  --color-surface-subtle-darker: #c3d9e9; /* Celeste más oscuro: franja inferior con la firma */
+  --color-surface-clean: #ffffff; /* Blanco puro: interiores de tarjetas */
+  --color-bg-body: #eef8ff; /* Fondo general del body */
 
   /* NUEVA PALETA: Verde Oliva Natural */
-  --color-olive: #566E43;            /* Verde oliva elegante para acentos y detalles botánicos */
-  --color-olive-dark: #384C2D;       /* Verde oliva profundo para texto de alto contraste */
-  --color-olive-light: #7E9768;      /* Verde oliva suave para hojas decorativas */
-  --color-olive-subtle: #F1F6EE;     /* Fondo suave con matiz oliva */
+  --color-olive: #566e43; /* Verde oliva elegante para acentos y detalles botánicos */
+  --color-olive-dark: #384c2d; /* Verde oliva profundo para texto de alto contraste */
+  --color-olive-light: #7e9768; /* Verde oliva suave para hojas decorativas */
+  --color-olive-subtle: #f1f6ee; /* Fondo suave con matiz oliva */
 
   /* NUEVA PALETA: Medio Dorado Cálido */
-  --color-gold: #C29B4D;             /* Dorado cálido de la corona y farol */
-  --color-gold-dark: #876725;        /* Dorado oscuro / bronce para textos destacados */
-  --color-gold-light: #DFBF77;       /* Dorado brillante para destellos y coronas */
-  --color-gold-subtle: #FDF9EE;      /* Fondo marfil con matiz dorado */
+  --color-gold: #c29b4d; /* Dorado cálido de la corona y farol */
+  --color-gold-dark: #876725; /* Dorado oscuro / bronce para textos destacados */
+  --color-gold-light: #dfbf77; /* Dorado brillante para destellos y coronas */
+  --color-gold-subtle: #fdf9ee; /* Fondo marfil con matiz dorado */
 
   /* Mapeo funcional con alto contraste garantizado */
   --color-fondo-loader: var(--color-surface-subtle);
@@ -49,12 +49,19 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   background-color: var(--color-fondo-body);
   color: var(--color-secondary);
-  font-family: var(--font-nunito), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family:
+    var(--font-nunito),
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -89,7 +96,14 @@ html, body {
 }
 
 /* Tipografía de títulos universales en CAPITALIZE */
-h1, h2, h3, h4, h5, h6, .title, .modal-title {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title,
+.modal-title {
   font-family: var(--font-aboreto), var(--font-cinzel), Georgia, serif;
   text-transform: capitalize !important;
 }
@@ -174,7 +188,7 @@ h1, h2, h3, h4, h5, h6, .title, .modal-title {
 }
 .sombra-top {
   top: -6px;
-  box-shadow: 0 5px 8px -2px rgba(4, 41, 74, 0.22);
+  box-shadow: 0 4px 14px -2px rgba(4, 41, 74, 0.08);
 }
 .sombra-bottom {
   bottom: -6px;
@@ -187,7 +201,11 @@ h1, h2, h3, h4, h5, h6, .title, .modal-title {
 }
 
 .degradez-opcional-var {
-  background: linear-gradient(180deg, var(--color-surface-subtle) 0%, var(--color-bg-body) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--color-surface-subtle) 0%,
+    var(--color-bg-body) 100%
+  );
 }
 
 /* Botones universales con ribete dorado sutil y hover oliva */
@@ -211,7 +229,8 @@ h1, h2, h3, h4, h5, h6, .title, .modal-title {
   text-transform: capitalize;
 }
 
-.boton:hover, .boton:focus {
+.boton:hover,
+.boton:focus {
   background-color: var(--color-olive-dark);
   border-color: var(--color-gold);
   transform: translateY(-2px);
@@ -237,7 +256,7 @@ h1, h2, h3, h4, h5, h6, .title, .modal-title {
 .fairytale-hero-section {
   position: relative;
   width: 100%;
-  background-color: #FAF7F2;
+  background-color: #faf7f2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -270,27 +289,357 @@ h1, h2, h3, h4, h5, h6, .title, .modal-title {
   width: 5%;
   aspect-ratio: 1 / 1;
   transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(255, 235, 160, 0.95) 0%, rgba(225, 165, 50, 0.45) 45%, transparent 75%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 235, 160, 0.95) 0%,
+    rgba(225, 165, 50, 0.45) 45%,
+    transparent 75%
+  );
   border-radius: 50%;
   pointer-events: none;
   animation: candleGlow 2.8s ease-in-out infinite alternate;
 }
 
 @keyframes candleGlow {
-  0% { transform: translate(-50%, -50%) scale(0.85); opacity: 0.65; }
-  50% { transform: translate(-50%, -50%) scale(1.25); opacity: 1; }
-  100% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.8; }
+  0% {
+    transform: translate(-50%, -50%) scale(0.85);
+    opacity: 0.65;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.25);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.95);
+    opacity: 0.8;
+  }
 }
 
 /* ========================================================
-   CUENTA REGRESIVA (FONDO DORADO ARMONIOSO CON LA PORTADA)
+   HERO SECTION – NUEVA ARQUITECTURA EN CAPAS
+   (Reemplaza la portada fairytale de imagen única)
+   ======================================================== */
+
+/* Sección raíz */
+.hero-section {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(4, 41, 74, 0.08);
+  box-shadow: 0 4px 18px rgba(4, 41, 74, 0.03);
+  z-index: 2;
+}
+
+/* Contenedor interno con max-width consistente con el póster anterior */
+.hero-inner {
+  position: relative;
+  width: 100%;
+  max-width: 682px;
+  margin: 0 auto;
+  min-height: 640px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+@media (min-width: 480px) {
+  .hero-inner {
+    min-height: 670px;
+  }
+}
+
+@media (min-width: 682px) {
+  .hero-inner {
+    min-height: 720px;
+  }
+}
+
+/* Fondo blanco claro del hero */
+.hero-background {
+  position: absolute;
+  inset: 0;
+  background-color: #ffffff;
+  z-index: 0;
+}
+
+/* Capa de paisaje: árbol + río */
+.hero-landscape-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Árbol izquierdo con farol – más alto, pegado al borde izquierdo con mitad del tronco afuera */
+.hero-tree-asset {
+  position: absolute;
+  top: -2%;
+  left: -14%;
+  height: 92%;
+  aspect-ratio: 848 / 1264;
+  display: flex;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+@media (max-width: 480px) {
+  .hero-tree-asset {
+    left: -25%;
+    height: 86%;
+    top: -45px;
+  }
+}
+
+/* Luz cálida titilante perfectamente centrada sobre el farol del árbol */
+.hero-tree-asset .hero-lantern-glow {
+  position: absolute;
+  left: 37.5%;
+  top: 68%;
+  width: 46px;
+  height: 46px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 235, 160, 0.95) 0%,
+    rgba(225, 165, 50, 0.45) 45%,
+    transparent 75%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  animation: candleGlow 2.8s ease-in-out infinite alternate;
+}
+
+/* Animales, río y pasto – franja inferior fija sin invadir la tipografía */
+.hero-landscape-bottom-asset {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  max-height: 33%;
+  pointer-events: none;
+}
+
+@media (min-width: 682px) {
+  .hero-landscape-bottom-asset {
+    height: 220px;
+  }
+}
+
+/* Capa de elementos flotantes */
+.hero-floating-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Mariposa arriba-derecha */
+.hero-butterfly-top {
+  position: absolute;
+  top: 7%;
+  right: 5%;
+  animation: butterflyFloat 4s ease-in-out infinite alternate;
+}
+
+/* Mariposa abajo-derecha */
+.hero-butterfly-bottom {
+  position: absolute;
+  bottom: 27%;
+  right: 7%;
+  animation: butterflyFloat 5.2s ease-in-out infinite alternate-reverse;
+}
+
+/* Destellos dorados – posiciones dispersas */
+.hero-sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-gold-light);
+  opacity: 0;
+  animation: sparkleAppear 3s ease-in-out infinite;
+}
+
+.hero-sparkle::before,
+.hero-sparkle::after {
+  content: "";
+  position: absolute;
+  background: var(--color-gold-light);
+  border-radius: 50%;
+}
+
+/* Cruz de destello */
+.hero-sparkle::before {
+  width: 2px;
+  height: 14px;
+  top: -4px;
+  left: 2px;
+}
+
+.hero-sparkle::after {
+  width: 14px;
+  height: 2px;
+  left: -4px;
+  top: 2px;
+}
+
+/* Posiciones individuales con delays escalonados */
+.hero-sparkle--1 {
+  top: 18%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.hero-sparkle--2 {
+  top: 35%;
+  right: 18%;
+  animation-delay: 0.7s;
+}
+
+.hero-sparkle--3 {
+  top: 55%;
+  left: 12%;
+  animation-delay: 1.4s;
+}
+
+.hero-sparkle--4 {
+  top: 22%;
+  right: 30%;
+  animation-delay: 2.1s;
+}
+
+.hero-sparkle--5 {
+  bottom: 32%;
+  left: 30%;
+  animation-delay: 2.8s;
+}
+
+/* Capa de tipografía: amplio espaciado vertical que evita choques arriba y abajo */
+.hero-text-layer {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 250px 25px 250px;
+  gap: 6px;
+  width: 100%;
+}
+
+@media (min-width: 682px) {
+  .hero-text-layer {
+    padding: 76px 24px 230px;
+    gap: 8px;
+  }
+}
+
+/* Fecha del evento */
+.hero-date {
+  display: block;
+  font-family: var(--font-aboreto), Georgia, serif;
+  font-size: 13px;
+  letter-spacing: 0.35em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+/* Corona dorada */
+.hero-crown {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2px;
+}
+
+/* Nombre de la quinceañera – elemento más prominente (visual, no h1 semántico) */
+.hero-name {
+  font-family: var(--font-cinzel), Georgia, serif !important;
+  font-size: clamp(52px, 13vw, 76px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+  color: var(--color-primary);
+  text-transform: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Título "Mis XV Años" */
+.hero-title {
+  font-family: var(--font-aboreto), Georgia, serif;
+  font-size: clamp(14px, 3.2vw, 18px);
+  letter-spacing: 0.28em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin: 6px 0 0;
+  padding: 0;
+}
+
+/* Frase de la quinceañera */
+.hero-quote {
+  font-family: var(--font-nunito), sans-serif;
+  font-size: clamp(12.5px, 2.9vw, 15px);
+  font-style: italic;
+  color: var(--color-secondary);
+  max-width: 320px;
+  line-height: 1.5;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+/* ── Keyframes para la nueva Hero Section ───────────────── */
+
+@keyframes butterflyFloat {
+  0% {
+    transform: translateY(0px) rotate(-3deg) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg) scale(1.04);
+  }
+  100% {
+    transform: translateY(4px) rotate(-5deg) scale(0.97);
+  }
+}
+
+@keyframes sparkleAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.4) rotate(0deg);
+  }
+  30% {
+    opacity: 0.9;
+    transform: scale(1) rotate(20deg);
+  }
+  60% {
+    opacity: 0.6;
+    transform: scale(0.8) rotate(40deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.4) rotate(60deg);
+  }
+}
+
+/* ========================================================
+   CUENTA REGRESIVA (FONDO BLANCO LIMPIO CON TRANSICIÓN SUAVE)
    ======================================================== */
 section.cuenta-regresiva.cuenta-regresiva-dorada {
   position: relative;
-  background-color: #FAF5EA;
-  background-image: radial-gradient(ellipse at 50% 30%, #FFFDF9 0%, #FAF4E8 65%, #F4ECE0 100%);
-  border-top: 1px solid rgba(194, 155, 77, 0.35);
-  border-bottom: 1px solid rgba(194, 155, 77, 0.35);
+  background-color: #ffffff;
+  background-image: none;
+  border-top: 1px solid rgba(4, 41, 74, 0.08);
+  border-bottom: 1px solid rgba(194, 155, 77, 0.25);
+  box-shadow: 0 -4px 18px -2px rgba(4, 41, 74, 0.05);
   padding: 60px 15px;
 }
 
@@ -388,19 +737,22 @@ section.ceremonia-fiesta {
 .box-color-col {
   width: 100%;
   max-width: 480px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 24px;
   padding: 42px 24px;
-  border: 1.5px solid #B8D6EB;
+  border: 1.5px solid #b8d6eb;
   box-shadow: 0 12px 36px rgba(74, 123, 162, 0.16);
   text-align: center;
-  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
 }
 
 .box-color-col.fiesta-main-card-white {
-  background-color: #FFFFFF !important;
+  background-color: #ffffff !important;
   background-image: none !important;
-  border: 1.5px solid #B8D6EB !important;
+  border: 1.5px solid #b8d6eb !important;
   box-shadow: 0 12px 36px rgba(74, 123, 162, 0.16) !important;
 }
 
@@ -453,7 +805,7 @@ section.ceremonia-fiesta {
 
 .box-color-col .boton {
   background-color: var(--color-primary) !important;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
   border: 1px solid var(--color-gold);
   box-shadow: 0 4px 14px rgba(4, 41, 74, 0.18);
 }
@@ -501,22 +853,28 @@ section.galeria {
 }
 
 .polaroid {
-  background-color: #FFFFFF !important;
+  background-color: #ffffff !important;
   padding: 16px 16px 54px 16px;
   border-radius: 4px;
   border: 1px solid rgba(4, 41, 74, 0.08);
-  box-shadow: 0 14px 35px rgba(4, 41, 74, 0.15), 0 3px 10px rgba(0, 0, 0, 0.05);
+  box-shadow:
+    0 14px 35px rgba(4, 41, 74, 0.15),
+    0 3px 10px rgba(0, 0, 0, 0.05);
   max-width: 400px;
   width: 100%;
   margin: 0 auto;
   transform: rotate(-1.2deg);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
   display: block;
 }
 
 .polaroid:hover {
   transform: rotate(0deg) translateY(-4px) scale(1.01);
-  box-shadow: 0 20px 42px rgba(4, 41, 74, 0.22), 0 6px 14px rgba(0, 0, 0, 0.08);
+  box-shadow:
+    0 20px 42px rgba(4, 41, 74, 0.22),
+    0 6px 14px rgba(0, 0, 0, 0.08);
 }
 
 .polaroid-img {
@@ -556,10 +914,10 @@ section.fiesta {
 
 /* 3 Cards de Fiesta: Fondo blanco puro con luz celeste */
 .content-item-fiesta .fiesta-card-white {
-  background-color: #FFFFFF !important;
+  background-color: #ffffff !important;
   background-image: none !important;
   border-radius: 20px;
-  border: 1.5px solid #B8D6EB !important;
+  border: 1.5px solid #b8d6eb !important;
   box-shadow: 0 8px 30px rgba(74, 123, 162, 0.16) !important;
   max-width: 100%;
   min-height: 390px;
@@ -569,7 +927,10 @@ section.fiesta {
   justify-content: space-between;
   align-items: center;
   padding: 32px 18px;
-  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
 }
 
 .content-item-fiesta .fiesta-card-white:hover {
@@ -618,7 +979,7 @@ section.fiesta {
 section.regalos.regalos-blanco {
   position: relative;
   padding: 70px 15px;
-  background-color: #FFFFFF !important;
+  background-color: #ffffff !important;
   background-image: none !important;
   text-align: center;
   border-top: 1px solid rgba(194, 155, 77, 0.25);
@@ -636,7 +997,7 @@ section.regalos.regalos-blanco .subtitle {
 
 section.regalos.regalos-blanco .boton {
   background-color: var(--color-primary) !important;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
   border: 1.5px solid var(--color-gold);
   box-shadow: 0 4px 16px rgba(4, 41, 74, 0.2);
 }
@@ -726,8 +1087,12 @@ section.footer {
   height: 1.5px;
   background-color: var(--color-gold);
 }
-.col-nombres-footer .nombres::before { top: 0; }
-.col-nombres-footer .nombres::after { bottom: 0; }
+.col-nombres-footer .nombres::before {
+  top: 0;
+}
+.col-nombres-footer .nombres::after {
+  bottom: 0;
+}
 
 .col-nombres-footer .nombres span {
   font-family: var(--font-cinzel), var(--font-aboreto), serif;
@@ -785,7 +1150,9 @@ section.footer {
   color: var(--color-primary) !important;
   font-weight: 700;
   cursor: pointer;
-  transition: color 0.3s ease, transform 0.2s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.2s ease;
   padding: 4px 8px;
   text-transform: capitalize;
   letter-spacing: 1.5px;
@@ -830,7 +1197,7 @@ footer.firma-footer {
 }
 
 .firma-texto .heart {
-  color: #D32F2F;
+  color: #d32f2f;
   margin: 0 4px;
 }
 
@@ -1093,8 +1460,12 @@ footer.firma-footer {
   height: 1px;
   background-color: var(--color-gold);
 }
-.music-modal-names .nombres::before { top: 0; }
-.music-modal-names .nombres::after { bottom: 0; }
+.music-modal-names .nombres::before {
+  top: 0;
+}
+.music-modal-names .nombres::after {
+  bottom: 0;
+}
 
 .music-modal-names .nombres span {
   font-family: var(--font-cinzel), var(--font-aboreto), serif;
@@ -1145,14 +1516,18 @@ footer.firma-footer {
   width: 66px;
   height: 66px;
   border-radius: 50%;
-  background-color: #58A7D8 !important;
-  border: 2.5px solid #FFFFFF !important;
+  background-color: #58a7d8 !important;
+  border: 2.5px solid #ffffff !important;
   box-shadow: 0 4px 18px rgba(88, 167, 216, 0.5) !important;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
   padding: 0;
   outline: none;
 }
@@ -1160,22 +1535,26 @@ footer.firma-footer {
 /* Música ACTIVADA: fondo celeste brillante, borde blanco nítido, opacidad 1 */
 .floating-music-player.is-playing {
   opacity: 1 !important;
-  background-color: #58A7D8 !important;
-  border: 2.5px solid #FFFFFF !important;
-  box-shadow: 0 6px 22px rgba(88, 167, 216, 0.6), 0 0 14px rgba(255, 255, 255, 0.7) !important;
+  background-color: #58a7d8 !important;
+  border: 2.5px solid #ffffff !important;
+  box-shadow:
+    0 6px 22px rgba(88, 167, 216, 0.6),
+    0 0 14px rgba(255, 255, 255, 0.7) !important;
   animation: musicPulse 3s infinite ease-in-out;
 }
 
 .floating-music-player.is-playing:hover {
   transform: scale(1.08);
-  background-color: #4396C9 !important;
-  box-shadow: 0 8px 26px rgba(88, 167, 216, 0.75), 0 0 18px rgba(255, 255, 255, 0.85) !important;
+  background-color: #4396c9 !important;
+  box-shadow:
+    0 8px 26px rgba(88, 167, 216, 0.75),
+    0 0 18px rgba(255, 255, 255, 0.85) !important;
 }
 
 /* Música DESACTIVADA: fondo celeste con opacidad reducida para indicar pausa */
 .floating-music-player.is-paused {
   opacity: 0.55 !important;
-  background-color: #58A7D8 !important;
+  background-color: #58a7d8 !important;
   border: 2px solid rgba(255, 255, 255, 0.85) !important;
   box-shadow: 0 3px 12px rgba(4, 41, 74, 0.18) !important;
 }
@@ -1183,7 +1562,7 @@ footer.firma-footer {
 .floating-music-player.is-paused:hover {
   opacity: 0.85 !important;
   transform: scale(1.05);
-  background-color: #4396C9 !important;
+  background-color: #4396c9 !important;
 }
 
 /* Icono de la música en color blanco puro */
@@ -1200,16 +1579,21 @@ footer.firma-footer {
 .music-icon-lottie svg circle,
 .music-icon-lottie svg ellipse,
 .music-icon-lottie svg g {
-  fill: #FFFFFF !important;
-  stroke: #FFFFFF !important;
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
 }
 
 @keyframes musicPulse {
-  0%, 100% {
-    box-shadow: 0 6px 22px rgba(88, 167, 216, 0.5), 0 0 10px rgba(255, 255, 255, 0.4);
+  0%,
+  100% {
+    box-shadow:
+      0 6px 22px rgba(88, 167, 216, 0.5),
+      0 0 10px rgba(255, 255, 255, 0.4);
   }
   50% {
-    box-shadow: 0 8px 28px rgba(88, 167, 216, 0.75), 0 0 16px rgba(255, 255, 255, 0.75);
+    box-shadow:
+      0 8px 28px rgba(88, 167, 216, 0.75),
+      0 0 16px rgba(255, 255, 255, 0.75);
   }
 }
 
@@ -1245,8 +1629,14 @@ footer.firma-footer {
 }
 
 @keyframes dropdownFadeIn {
-  from { opacity: 0; transform: translateX(-50%) translateY(-6px); }
-  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 .calendar-dropdown-item {
@@ -1262,7 +1652,9 @@ footer.firma-footer {
   font-weight: 600;
   color: var(--color-primary);
   cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
   text-align: left;
 }
 
@@ -1304,7 +1696,9 @@ footer.firma-footer {
   height: 8px;
   border-radius: 50%;
   background-color: var(--color-accent);
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .rsvp-step-dot.active {
@@ -1359,7 +1753,9 @@ footer.firma-footer {
   outline: none;
   background-color: var(--color-surface-clean);
   color: var(--color-primary);
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .rsvp-input:focus {
@@ -1368,7 +1764,7 @@ footer.firma-footer {
 }
 
 .rsvp-input-error {
-  border-color: #C0392B !important;
+  border-color: #c0392b !important;
   box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.1) !important;
 }
 
@@ -1376,7 +1772,7 @@ footer.firma-footer {
   display: block;
   font-family: var(--font-nunito);
   font-size: 12px;
-  color: #C0392B;
+  color: #c0392b;
   font-weight: 600;
   margin-top: 4px;
 }
@@ -1413,7 +1809,7 @@ footer.firma-footer {
 
 .rsvp-counter-btn:hover:not(:disabled) {
   background-color: var(--color-primary);
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .rsvp-counter-btn:disabled {
@@ -1494,7 +1890,9 @@ footer.firma-footer {
   height: 7px;
   border-radius: 50%;
   background-color: var(--color-accent);
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .rsvp-progress-dot.active {
@@ -1574,7 +1972,7 @@ footer.firma-footer {
 .rsvp-summary-error {
   font-family: var(--font-nunito);
   font-size: 13px;
-  color: #C0392B;
+  color: #c0392b;
   font-weight: 600;
   text-align: center;
   margin-bottom: 12px;
@@ -1598,9 +1996,17 @@ footer.firma-footer {
 }
 
 @keyframes successPop {
-  0%   { transform: scale(0.5); opacity: 0; }
-  70%  { transform: scale(1.15); }
-  100% { transform: scale(1); opacity: 1; }
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .rsvp-success-title {
@@ -1740,7 +2146,7 @@ footer.firma-footer {
 
 .bank-item-card:hover {
   border-color: var(--color-gold);
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: 0 4px 14px rgba(4, 41, 74, 0.08);
 }
 
@@ -1758,7 +2164,7 @@ footer.firma-footer {
   height: 38px;
   min-width: 38px;
   border-radius: 50%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: 1.5px solid rgba(184, 214, 235, 0.8);
   display: flex;
   align-items: center;
@@ -1832,7 +2238,7 @@ footer.firma-footer {
   flex-shrink: 0 !important;
   padding: 8px 14px !important;
   border-radius: 9999px !important; /* Estilo píldora/badge */
-  background-color: #FFFFFF !important;
+  background-color: #ffffff !important;
   color: var(--color-primary) !important;
   border: 1.5px solid var(--color-primary) !important;
   font-family: var(--font-nunito) !important;
@@ -1846,7 +2252,7 @@ footer.firma-footer {
 
 .bank-copy-badge:hover {
   background-color: var(--color-primary) !important;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
   transform: translateY(-1px) scale(1.02) !important;
   box-shadow: 0 4px 12px rgba(4, 41, 74, 0.18) !important;
 }
@@ -1857,9 +2263,9 @@ footer.firma-footer {
 
 /* Estado de Éxito: Copiado */
 .bank-copy-badge.is-copied {
-  background-color: #E8F5E9 !important;
-  color: #1B5E20 !important;
-  border-color: #4CAF50 !important;
+  background-color: #e8f5e9 !important;
+  color: #1b5e20 !important;
+  border-color: #4caf50 !important;
   box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2) !important;
 }
 
@@ -1868,7 +2274,7 @@ footer.firma-footer {
 }
 
 .copy-badge-icon.check-icon {
-  color: #1B5E20;
+  color: #1b5e20;
 }
 
 .copy-badge-text {
@@ -1927,13 +2333,17 @@ footer.firma-footer {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background: linear-gradient(135deg, var(--color-surface-subtle) 0%, var(--color-bg-body) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-surface-subtle) 0%,
+    var(--color-bg-body) 100%
+  );
 }
 
 .pin-gate-card {
   width: 100%;
   max-width: 380px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 24px;
   padding: 38px 28px;
   border: 1.5px solid var(--color-bordes-marcos);
@@ -1946,9 +2356,18 @@ footer.firma-footer {
 }
 
 @keyframes pinShake {
-  0%, 100% { transform: translateX(0); }
-  20%, 60% { transform: translateX(-8px); }
-  40%, 80% { transform: translateX(8px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-8px);
+  }
+  40%,
+  80% {
+    transform: translateX(8px);
+  }
 }
 
 .pin-gate-icon {
@@ -2001,7 +2420,7 @@ footer.firma-footer {
   border-radius: 14px;
   outline: none;
   color: var(--color-primary);
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   margin-bottom: 14px;
   transition: all 0.25s ease;
 }
@@ -2012,14 +2431,14 @@ footer.firma-footer {
 }
 
 .pin-input-error {
-  border-color: #C0392B !important;
+  border-color: #c0392b !important;
   background-color: rgba(192, 57, 43, 0.04);
 }
 
 .pin-gate-error {
   font-family: var(--font-nunito);
   font-size: 13px;
-  color: #C0392B;
+  color: #c0392b;
   font-weight: 700;
   margin: 0 0 14px 0;
 }
@@ -2027,7 +2446,7 @@ footer.firma-footer {
 .pin-gate-btn {
   width: 100%;
   background-color: var(--color-primary);
-  color: #FFFFFF;
+  color: #ffffff;
   border: 1px solid var(--color-gold);
   border-radius: 12px;
   padding: 14px;
@@ -2066,12 +2485,14 @@ footer.firma-footer {
   left: 0;
   bottom: 0;
   width: 260px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-right: 1.5px solid var(--color-accent);
   display: flex;
   flex-direction: column;
   z-index: 1000;
-  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    width 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 4px 0 24px rgba(4, 41, 74, 0.05);
 }
 
@@ -2139,7 +2560,7 @@ footer.firma-footer {
 
 .sidebar-collapse-btn:hover {
   background-color: var(--color-primary);
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 /* Navegación */
@@ -2180,7 +2601,7 @@ footer.firma-footer {
 
 .sidebar-nav-item.is-active {
   background-color: var(--color-primary);
-  color: #FFFFFF !important;
+  color: #ffffff !important;
   box-shadow: 0 4px 14px rgba(4, 41, 74, 0.2);
 }
 
@@ -2207,7 +2628,7 @@ footer.firma-footer {
 
 .sidebar-nav-item.is-active .sidebar-nav-badge {
   background-color: rgba(255, 255, 255, 0.25);
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 /* Footer del sidebar */
@@ -2254,7 +2675,7 @@ footer.firma-footer {
   align-items: center;
   gap: 14px;
   padding: 16px 20px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-bottom: 1.5px solid var(--color-accent);
   position: sticky;
   top: 0;
@@ -2357,7 +2778,7 @@ footer.firma-footer {
 }
 
 .dash-stat-card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 18px;
   padding: 20px;
   display: flex;
@@ -2365,7 +2786,9 @@ footer.firma-footer {
   gap: 16px;
   border: 1.5px solid rgba(184, 214, 235, 0.8);
   box-shadow: 0 4px 16px rgba(4, 41, 74, 0.06);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .dash-stat-card:hover {
@@ -2423,7 +2846,7 @@ footer.firma-footer {
 
 /* Toolbar de listado */
 .dash-list-section {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 20px;
   border: 1.5px solid var(--color-bordes-marcos);
   padding: 24px 20px;
@@ -2488,7 +2911,7 @@ footer.firma-footer {
   font-family: var(--font-nunito);
   font-size: 14px;
   color: var(--color-primary);
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   transition: all 0.2s ease;
 }
 
@@ -2509,7 +2932,9 @@ footer.firma-footer {
   border: 1.5px solid rgba(184, 214, 235, 0.8);
   border-radius: 14px;
   overflow: hidden;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .dash-guest-card:hover {
@@ -2570,7 +2995,7 @@ footer.firma-footer {
   font-family: var(--font-nunito);
   font-size: 12px;
   font-weight: 800;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: var(--color-secondary);
   border: 1px solid rgba(184, 214, 235, 0.8);
 }
@@ -2604,7 +3029,7 @@ footer.firma-footer {
   font-family: var(--font-nunito);
   font-size: 14px;
   padding: 6px 10px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 8px;
   border: 1px solid rgba(184, 214, 235, 0.6);
 }
@@ -2642,7 +3067,7 @@ footer.firma-footer {
 
 .dash-song-card:hover {
   border-color: var(--color-gold);
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: 0 4px 14px rgba(4, 41, 74, 0.08);
 }
 
@@ -2650,7 +3075,7 @@ footer.firma-footer {
   width: 42px;
   height: 42px;
   border-radius: 12px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: 1.5px solid rgba(184, 214, 235, 0.8);
   display: flex;
   align-items: center;
@@ -2686,7 +3111,7 @@ footer.firma-footer {
   gap: 6px;
   padding: 8px 14px;
   border-radius: 9999px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: var(--color-primary);
   border: 1.5px solid var(--color-primary);
   font-family: var(--font-nunito);
@@ -2700,7 +3125,7 @@ footer.firma-footer {
 
 .dash-song-link-btn:hover {
   background-color: var(--color-primary);
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 /* Empty state */
