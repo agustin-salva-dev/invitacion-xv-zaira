@@ -1,5 +1,15 @@
-import type { EventSchedule } from "@/app/types/invitation";
-import type { ModalId } from "@/app/types/invitation";
+"use client";
+
+/**
+ * Sección de detalles del evento (fecha, lugar, dirección).
+ * Integra los 3 botones de interacción:
+ * - Agendar: CalendarDropdown (Google Calendar / Apple Calendar)
+ * - Confirmar asistencia: abre el modal RSVP multi-step
+ * - ¿Cómo llegar?: abre el modal del mapa
+ */
+
+import type { EventSchedule, ModalId } from "@/app/types/invitation";
+import { CalendarDropdown } from "@/app/components/calendar/CalendarDropdown";
 import { LottiePlayer } from "@/app/components/common/LottiePlayer";
 import {
   SectionDividerTop,
@@ -8,11 +18,13 @@ import {
 
 interface EventDetailsSectionProps {
   readonly event: EventSchedule;
+  readonly honoree: string;
   readonly onOpenModal: (id: ModalId) => void;
 }
 
 export function EventDetailsSection({
   event,
+  honoree,
   onOpenModal,
 }: EventDetailsSectionProps) {
   return (
@@ -31,18 +43,14 @@ export function EventDetailsSection({
               <h3>Fiesta</h3>
 
               <div className="info-col">
+                {/* Día + Agendar (Dropdown de calendario) */}
                 <div className="info-box">
                   <h6>Día</h6>
                   <p>{event.date}</p>
-                  <button
-                    type="button"
-                    className="boton"
-                    onClick={() => onOpenModal("rsvp")}
-                  >
-                    Agendar
-                  </button>
+                  <CalendarDropdown event={event} honoree={honoree} />
                 </div>
 
+                {/* Lugar + Confirmar asistencia */}
                 <div className="info-box">
                   <h6>Lugar</h6>
                   <p>{event.venue}</p>
@@ -55,6 +63,7 @@ export function EventDetailsSection({
                   </button>
                 </div>
 
+                {/* Dirección + ¿Cómo llegar? */}
                 <div className="info-box">
                   <h6>Dirección</h6>
                   <p>{event.address}</p>
@@ -76,4 +85,3 @@ export function EventDetailsSection({
     </section>
   );
 }
-

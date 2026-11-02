@@ -1,3 +1,10 @@
+"use client";
+
+/**
+ * Modal informativo de Dress Code para los XV Años de Zaira.
+ * Dress code: Elegante Sport (estilo argentino).
+ */
+
 import { FacadeModalWrapper } from "./FacadeModalWrapper";
 
 interface DressCodeModalProps {
@@ -16,14 +23,14 @@ export function DressCodeModal({ isOpen, onClose }: DressCodeModalProps) {
     >
       <div className="modal-info-content">
         <p className="modal-info-text">
-          Para esta celebración tan especial, te pedimos que vengas elegante.
+          El dress code para esta noche especial es <strong>Elegante Sport</strong>.
         </p>
-        <ul className="modal-info-list">
-          <li>Damas: vestidos o conjuntos elegantes</li>
-          <li>Caballeros: traje o camisa con pantalón de vestir</li>
-          <li>Por favor evitar el color blanco</li>
-        </ul>
+        <p className="modal-info-text">
+          Te invitamos a elegir un look que combine elegancia y comodidad para disfrutar
+          y celebrar juntos esta noche mágica.
+        </p>
       </div>
+
       <div className="facade-modal-footer">
         <button type="button" className="boton" onClick={onClose}>
           Entendido
@@ -32,4 +39,3 @@ export function DressCodeModal({ isOpen, onClose }: DressCodeModalProps) {
     </FacadeModalWrapper>
   );
 }
-

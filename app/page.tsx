@@ -83,6 +83,7 @@ export default function InvitationPage() {
           {/* Detalles del evento */}
           <EventDetailsSection
             event={invitationData.event}
+            honoree={invitationData.honoree}
             onOpenModal={handleOpenModal}
           />
 
@@ -109,13 +110,14 @@ export default function InvitationPage() {
           />
 
           {/* Modales de fachada */}
-          <RsvpModal isOpen={isOpen("rsvp")} onClose={closeModal} />
+          <RsvpModal isOpen={isOpen("rsvp")} honoree={invitationData.honoree} onClose={closeModal} />
           <MapModal
             isOpen={isOpen("map")}
             onClose={closeModal}
             venue={invitationData.event.venue}
             address={invitationData.event.address}
             mapsUrl={invitationData.event.mapsUrl}
+            mapsEmbedUrl={invitationData.event.mapsEmbedUrl}
           />
           <SongSuggestionModal isOpen={isOpen("song")} onClose={closeModal} />
           <DressCodeModal isOpen={isOpen("dressCode")} onClose={closeModal} />

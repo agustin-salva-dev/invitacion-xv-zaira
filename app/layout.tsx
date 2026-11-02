@@ -22,8 +22,17 @@ const cinzel = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Zaira ::: Mis 15 años",
+  title: "Zaira | Mis 15 años",
   description: "Invitación de quinceañera – Zaira",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "32x32" },
+    ],
+    apple: [
+      { url: "/apple-icon.svg", sizes: "180x180", type: "image/svg+xml" },
+    ],
+  },
 };
 
 export const viewport: Viewport = {
@@ -46,10 +55,7 @@ export default function RootLayout({
         {children}
 
         {/* Lottie Web local self-hosted */}
-        <Script
-          src="/js/lottie_svg.min.js"
-          strategy="beforeInteractive"
-        />
+        <Script src="/js/lottie_svg.min.js" strategy="beforeInteractive" />
       </body>
     </html>
   );

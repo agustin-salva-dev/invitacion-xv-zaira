@@ -6,17 +6,19 @@ export const invitationData: InvitationConfig = {
   subtitle: "Mis XV años",
   coverPhrase:
     "Te espero para compartir la alegría de esa noche que será para mí mágica, inolvidable y única.",
-  displayDate: "15.06.2027",
-  eventDate: "2027-06-15T19:00:00",
+  displayDate: "14.11.2026",
+  eventDate: "2026-11-14T20:00:00",
   welcomeMessage: "Bienvenidos a la invitación de",
   galleryPhotoAlt: "Un recorrido de mis 15 años",
   event: {
     label: "Fiesta",
-    date: "Sábado 15 de Junio - 19hs",
-    time: "19:00",
-    venue: "Salón Avril",
-    address: "Av. Pergamino 203 - Cba",
-    mapsUrl: "https://maps.google.com/?q=Salon+Avril+Cordoba+Argentina",
+    date: "Sábado 14 de Noviembre - 20hs",
+    startIso: "2026-11-14T20:00:00",
+    time: "20:00",
+    venue: "Salón Looren",
+    address: "Julio Argentino San Millan 475 - Cerrillos, Salta",
+    mapsUrl: "https://maps.google.com/?q=Salon+Looren+Julio+Argentino+San+Millan+475+Cerrillos+Salta",
+    mapsEmbedUrl: "https://www.google.com/maps?q=Salon+Looren+Julio+Argentino+San+Millan+475+Cerrillos+Salta&output=embed",
   },
 };
 

@@ -1,0 +1,88 @@
+// =============================================================================
+// SCHEMA DE BASE DE DATOS - Invitación XV Zaira
+// Base de datos: PostgreSQL (Neon Console)
+// ORM: Prisma Client
+//
+// INSTRUCCIONES PARA CONECTAR:
+// 1. Crear base de datos en Neon Console (https://neon.tech)
+// 2. Copiar la connection string en .env como DATABASE_URL
+// 3. Ejecutar: npx prisma db push
+// 4. Ejecutar: npx prisma generate
+// =============================================================================
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Estado de la confirmación de asistencia
+enum AttendanceStatus {
+  CONFIRMED  // Asistencia confirmada
+  CANCELLED  // Asistencia cancelada
+}
+
+// -----------------------------------------------------------------------
+// GuestConfirmation: Invitado titular que confirma su asistencia
+// Cada registro representa una confirmación individual (1 titular + N acompañantes).
+// El DNI del titular es único para evitar confirmaciones duplicadas.
+// -----------------------------------------------------------------------
+model GuestConfirmation {
+  id             String           @id @default(uuid())
+  firstName      String           @map("first_name") @db.VarChar(50)
+  lastName       String           @map("last_name") @db.VarChar(50)
+  dni            String           @unique @db.VarChar(10) // DNI único: previene duplicados
+  companionCount Int              @default(0) @map("companion_count") // Cache del total de acompañantes
+  status         AttendanceStatus @default(CONFIRMED)
+  createdAt      DateTime         @default(now()) @map("created_at")
+  updatedAt      DateTime         @updatedAt @map("updated_at")
+
+  // Relación 1:N con acompañantes (cascade delete)
+  companions     Companion[]
+
+  @@index([dni])
+  @@map("guest_confirmations")
+}
+
+// -----------------------------------------------------------------------
+// Companion: Acompañante de un titular confirmado
+// Cada acompañante pertenece a exactamente una GuestConfirmation.
+// El DNI del acompañante no necesita ser único globalmente, pero no puede
+// repetirse dentro de la misma confirmación (validado en la capa de aplicación).
+// -----------------------------------------------------------------------
+model Companion {
+  id             String            @id @default(uuid())
+  confirmationId String            @map("confirmation_id")
+  firstName      String            @map("first_name") @db.VarChar(50)
+  lastName       String            @map("last_name") @db.VarChar(50)
+  dni            String            @db.VarChar(10)
+  order          Int               @default(0) // Orden de ingreso (Acompañante 1, 2, 3...)
+  createdAt      DateTime          @default(now()) @map("created_at")
+
+  // Relación con el titular (cascade delete: si se borra el titular, se borran sus acompañantes)
+  confirmation   GuestConfirmation @relation(fields: [confirmationId], references: [id], onDelete: Cascade)
+
+  @@index([confirmationId])
+  @@index([dni])
+  @@map("companions")
+}
+
+// -----------------------------------------------------------------------
+// SongSuggestion: Sugerencia de canción para la playlist de la fiesta.
+// Cualquier invitado puede sugerir una canción con su nombre y el tema.
+// El link es opcional (YouTube, Spotify, etc.).
+// -----------------------------------------------------------------------
+model SongSuggestion {
+  id        String   @id @default(uuid())
+  guestName String   @map("guest_name") @db.VarChar(100) // Nombre de quien sugiere
+  songTitle String   @map("song_title") @db.VarChar(200) // Canción y artista
+  link      String?  @db.VarChar(500)                    // Link opcional (YouTube, Spotify, etc.)
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@index([createdAt])
+  @@map("song_suggestions")
+}
+

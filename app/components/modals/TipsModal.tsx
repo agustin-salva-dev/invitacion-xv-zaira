@@ -1,3 +1,10 @@
+"use client";
+
+/**
+ * Modal de Tips y Notas para los XV Años de Zaira.
+ * Información útil para los invitados: horario, confirmación y cierre temático.
+ */
+
 import { FacadeModalWrapper } from "./FacadeModalWrapper";
 
 interface TipsModalProps {
@@ -16,18 +23,23 @@ export function TipsModal({ isOpen, onClose }: TipsModalProps) {
     >
       <div className="modal-info-content">
         <ul className="modal-info-list">
-          <li>El evento comienza puntualmente a las 19hs</li>
-          <li>Se solicita confirmar asistencia antes del 1 de Junio</li>
-          <li>Habrá servicio de estacionamiento disponible</li>
-          <li>El lugar es accesible para personas con movilidad reducida</li>
+          <li>
+            🕗 El evento comienza a las <strong>20hs</strong> — te pedimos
+            puntualidad para que todos podamos disfrutar cada momento desde el
+            principio
+          </li>
+          <li>
+            📅 Se solicita confirmar asistencia antes del{" "}
+            <strong>1 de Junio</strong>
+          </li>
         </ul>
       </div>
-      <div className="facade-modal-footer">
+
+      <div className="facade-modal-footer mt-2">
         <button type="button" className="boton" onClick={onClose}>
-          Cerrar
+          ¡Nos vemos!
         </button>
       </div>
     </FacadeModalWrapper>
   );
 }
-
