@@ -21,8 +21,8 @@ export function HeroTypography({ honoree, displayDate }: HeroTypographyProps) {
             src="/assets/images/decorations/corona-dorada-exact.png"
             alt="Corona dorada decorativa"
             width={60}
-            height={60}
-            style={{ width: 60, height: "auto" }}
+            height={36}
+            style={{ width: "auto", height: "auto" }}
             onError={() => setCrownError(true)}
           />
         </div>
