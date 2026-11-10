@@ -26,6 +26,7 @@ export interface InvitationConfig {
   readonly coverPhrase: string;
   readonly displayDate: string; // e.g. "15.06.2025"
   readonly eventDate: string; // ISO 8601
+  readonly rsvpDeadlineIso: string; // ISO 8601 – fecha límite de confirmación
   readonly event: EventSchedule;
   readonly galleryPhotoAlt: string;
   readonly welcomeMessage: string;

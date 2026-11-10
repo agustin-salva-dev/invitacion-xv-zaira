@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import Script from "next/script";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 const aboreto = localFont({
@@ -53,6 +54,25 @@ export default function RootLayout({
     >
       <body>
         {children}
+
+        {/* Toast global – Sonner */}
+        <Toaster
+          position="bottom-center"
+          toastOptions={{
+            style: {
+              background: "#04294A",
+              color: "#ffffff",
+              border: "1px solid rgba(194,155,77,0.4)",
+              borderRadius: "14px",
+              fontFamily: "var(--font-nunito), sans-serif",
+              fontSize: "14px",
+              lineHeight: "1.5",
+              boxShadow: "0 8px 32px rgba(4,41,74,0.28)",
+              padding: "14px 18px",
+              maxWidth: "480px",
+            },
+          }}
+        />
 
         {/* Lottie Web local self-hosted */}
         <Script src="/js/lottie_svg.min.js" strategy="beforeInteractive" />

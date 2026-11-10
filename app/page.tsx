@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { toast } from "sonner";
 import { invitationData } from "@/app/config/invitationData";
 import type { ModalId } from "@/app/types/invitation";
 
@@ -26,6 +27,8 @@ import { GiftsModal } from "@/app/components/modals/GiftsModal";
 import { useMusicPlayer } from "@/app/hooks/useMusicPlayer";
 import { useModal } from "@/app/hooks/useModal";
 
+const RSVP_DEADLINE = new Date(invitationData.rsvpDeadlineIso);
+
 export default function InvitationPage() {
   const [preloaderDone, setPreloaderDone] = useState(false);
   const [musicModalDismissed, setMusicModalDismissed] = useState(false);
@@ -43,6 +46,13 @@ export default function InvitationPage() {
 
   const handleOpenModal = useCallback(
     (id: ModalId) => {
+      if (id === "rsvp" && new Date() > RSVP_DEADLINE) {
+        toast("Solo se podía confirmar asistencia hasta el 5 de noviembre solamente.", {
+          duration: 5000,
+          icon: "⏳",
+        });
+        return;
+      }
       openModal(id);
     },
     [openModal],
@@ -74,7 +84,7 @@ export default function InvitationPage() {
           {/* Reproductor flotante */}
           <FloatingMusicPlayer musicPlayer={musicPlayer} />
 
-          {/* Portada estilo Fairytale (Árbol, farol, mascotas en el río, corona) */}
+          {/* Portada estilo Fairytale */}
           <CoverHero
             honoree={invitationData.honoree}
             displayDate={invitationData.displayDate}
@@ -112,7 +122,7 @@ export default function InvitationPage() {
             onOpenModal={handleOpenModal}
           />
 
-          {/* Modales de fachada */}
+          {/* Modales */}
           <RsvpModal isOpen={isOpen("rsvp")} honoree={invitationData.honoree} onClose={closeModal} />
           <MapModal
             isOpen={isOpen("map")}
