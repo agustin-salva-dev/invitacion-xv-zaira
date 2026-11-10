@@ -8,6 +8,7 @@ export const invitationData: InvitationConfig = {
     "Te espero para compartir la alegría de esa noche que será para mí mágica, inolvidable y única.",
   displayDate: "14.11.2026",
   eventDate: "2026-11-14T20:00:00",
+  rsvpDeadlineIso: "2026-11-05T23:59:59",
   welcomeMessage: "Bienvenidos a la invitación de",
   galleryPhotoAlt: "Un recorrido de mis 15 años",
   event: {
